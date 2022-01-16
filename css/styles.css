@@ -130,11 +130,11 @@ body {
   letter-spacing: 0.02em;
   color: var(--basecolor2);
 }
-.header-link:hover,
+/* .header-link:hover,
 .header-link:focus {
   color: var(--basecolor3hover);
   border-bottom: 4px solid var(--basecolor3hover);
-}
+} */
 .header-contact {
   margin-left: auto;
 }
@@ -204,6 +204,17 @@ body {
 }
 .current {
   color: var(--basecolor3hover);
+  position: relative;
+}
+.current::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--basecolor3hover);
+  left: 0;
+  bottom: -33px;
 }
 /* ---features--- */
 .features {
@@ -564,7 +575,7 @@ body {
   height: 100%;
   text-align: center;
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateX(-100%);
+  transform: translateY(100%);
   transition: 500ms ease;
 }
 .text-overlay {
@@ -578,7 +589,7 @@ body {
   color: var(--basecolor1);
 }
 .thumb-overlay:hover .container-overlay {
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .portfolio-link:hover {
@@ -586,4 +597,38 @@ body {
 .h3-portfolio {
 }
 .p-portfolio {
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: var(--basecolor1);
+}
+.button-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-width: 1px;
+  border-radius: 50%;
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--basecolor1);
 }

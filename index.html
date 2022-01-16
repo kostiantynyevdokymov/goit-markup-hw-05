@@ -55,7 +55,7 @@
     <section class="make-order">
         <div class="container">
         <h1 class="make-order-title">эффективные решения для вашего бизнеса</h1>
-        <button type="button" class="make-order-button">Заказать услугу</button>
+        <button type="button" class="make-order-button" data-modal-open>Заказать услугу</button>
         </div>
     </section>
 <!--block features-->
@@ -379,5 +379,14 @@
     </div>
     </div>
 </footer>
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button class="button-modal" data-modal-close> <img src="../images/close.svg" alt="">
+        </button>
+    </div>
+</div>
+<script src="./js/modal.js">
+</script>
 </body>
 </html>
